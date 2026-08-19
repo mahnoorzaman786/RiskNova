@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-# 2026-08-18
-=======
->>>>>>> eb1c72c107d59fa31e1b7b7f67d4f2dee8e5f420
-
 # 📊 RiskNova – AI-Driven Project Risk Assessment
 
 RiskNova is an AI-powered web application that estimates the risk level of software projects using a trained Deep Neural Network (DNN). The model is a supervised machine learning classifier that learns from structured project attributes such as complexity, team size, communication, cost, testing quality, and previous defects to classify the project as Low, Medium, or High risk.
