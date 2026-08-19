@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 # 2026-08-18
+=======
+>>>>>>> eb1c72c107d59fa31e1b7b7f67d4f2dee8e5f420
 
 # 📊 RiskNova – AI-Driven Project Risk Assessment
 
@@ -41,9 +44,15 @@ Upload project information and click predict to receive the risk result.
 - ➡ View top contributing factors
 - ➡ Receive recommendations
 
+<<<<<<< HEAD
 ## 🎥 Video Demo
 
 📺 [Click here to view the demo]  
+=======
+## 🎥 RiskNova Demo
+
+[▶️ Watch Full Demo](https://www.youtube.com/watch?v=7qFIUv3s0K8&t=3s) 
+>>>>>>> eb1c72c107d59fa31e1b7b7f67d4f2dee8e5f420
 ▶ Watch Demo
 
 ## 🗂️ Dataset
