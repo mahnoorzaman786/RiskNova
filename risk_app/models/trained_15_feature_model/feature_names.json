@@ -1,0 +1,17 @@
+[
+    "project_size",
+    "team_size",
+    "project_duration",
+    "estimated_cost",
+    "project_complexity",
+    "requirements_stability",
+    "requirement_changes",
+    "communication_level",
+    "project_management_quality",
+    "resource_availability",
+    "team_experience",
+    "technical_expertise",
+    "testing_level",
+    "quality_factors",
+    "previous_defects"
+]

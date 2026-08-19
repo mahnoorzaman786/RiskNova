@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block title %}Risk Dashboard{% endblock %}
+{% block content %}
+<section class="page-hero">
+    <div class="container py-5">
+        <div class="text-center">
+            <span class="eyebrow">Project portfolio overview</span>
+            <h1>AI Risk Dashboard</h1>
+        </div>
+    </div>
+</section>
+
+<section class="section pb-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+                <div class="stat-card primary">
+                    <span>Total predictions</span>
+                    <strong>{{ total_predictions }}</strong>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="stat-card danger">
+                    <span>High-risk projects</span>
+                    <strong>{{ high_risk_projects }}</strong>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="stat-card warning">
+                    <span>Medium-risk projects</span>
+                    <strong>{{ medium_risk_projects }}</strong>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="stat-card success">
+                    <span>Low-risk projects</span>
+                    <strong>{{ low_risk_projects }}</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mt-1">
+            <div class="col-lg-7">
+                <div class="result-card">
+                    <h4>Recent predictions</h4>
+                    <div class="table-responsive">
+                        <table class="table dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Project</th>
+                                    <th>Risk</th>
+                                    <th>Probability</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for prediction in predictions %}
+                                <tr>
+                                    <td>{{ prediction.project_name }}</td>
+                                    <td><span class="risk-badge {{ prediction.risk_level|lower }}">{{ prediction.risk_level }}</span></td>
+                                    <td>{{ prediction.risk_probability|floatformat:1 }}%</td>
+                                    <td>{{ prediction.created_at|date:'M d, Y' }}</td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="4">No predictions available yet.</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="result-card">
+                    <h4>Risk distribution</h4>
+                    <div class="distribution-chart">
+                        <div class="chart-bar high" style="height: {{ high_percent }}%"></div>
+                        <div class="chart-bar medium" style="height: {{ medium_percent }}%"></div>
+                        <div class="chart-bar low" style="height: {{ low_percent }}%"></div>
+                    </div>
+                    <div class="chart-legend">
+                        <span><i class="legend-dot high"></i> High</span>
+                        <span><i class="legend-dot medium"></i> Medium</span>
+                        <span><i class="legend-dot low"></i> Low</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

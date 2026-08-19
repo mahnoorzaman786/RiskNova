@@ -1,0 +1,116 @@
+predictform.html {% extends 'base.html' %}
+{% block title %}Predict Project Risk{% endblock %}
+{% block content %}
+<section class="page-hero">
+    <div class="container py-5">
+        <div class="text-center">
+            <span class="eyebrow">Project risk assessment</span>
+            <h1>Predict Project Risk</h1>
+        </div>
+    </div>
+</section>
+
+<section class="section pb-5">
+    <div class="container">
+        <div class="predict-card">
+            <form method="post" novalidate>
+                {% csrf_token %}
+
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="form-section-header">Project Information</div>
+                    </div>
+
+                    {% for field in form %}
+                        {% if field.name in 'project_name project_size team_size project_duration estimated_cost project_complexity' %}
+                            <div class="col-md-6 col-xl-4">
+                                <div class="field-group">
+                                    <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                                    {{ field }}
+                                    {% if field.help_text %}
+                                        <small class="form-text">{{ field.help_text }}</small>
+                                    {% endif %}
+                                    {% if field.errors %}
+                                        <div class="text-danger small">{{ field.errors|join:', ' }}</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+                    <div class="col-12 mt-2">
+                        <div class="form-section-header">Requirements & Management</div>
+                    </div>
+
+                    {% for field in form %}
+                        {% if field.name in 'requirements_stability requirement_changes communication_level project_management_quality' %}
+                            <div class="col-md-6 col-xl-4">
+                                <div class="field-group">
+                                    <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                                    {{ field }}
+                                    {% if field.help_text %}
+                                        <small class="form-text">{{ field.help_text }}</small>
+                                    {% endif %}
+                                    {% if field.errors %}
+                                        <div class="text-danger small">{{ field.errors|join:', ' }}</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+                    <div class="col-12 mt-2">
+                        <div class="form-section-header">Resources</div>
+                    </div>
+
+                    {% for field in form %}
+                        {% if field.name in 'resource_availability team_experience technical_expertise' %}
+                            <div class="col-md-6 col-xl-4">
+                                <div class="field-group">
+                                    <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                                    {{ field }}
+                                    {% if field.help_text %}
+                                        <small class="form-text">{{ field.help_text }}</small>
+                                    {% endif %}
+                                    {% if field.errors %}
+                                        <div class="text-danger small">{{ field.errors|join:', ' }}</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+                    <div class="col-12 mt-2">
+                        <div class="form-section-header">Quality & Testing</div>
+                    </div>
+
+                    {% for field in form %}
+                        {% if field.name in 'testing_level quality_factors previous_defects' %}
+                            <div class="col-md-6 col-xl-4">
+                                <div class="field-group">
+                                    <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                                    {{ field }}
+                                    {% if field.help_text %}
+                                        <small class="form-text">{{ field.help_text }}</small>
+                                    {% endif %}
+                                    {% if field.errors %}
+                                        <div class="text-danger small">{{ field.errors|join:', ' }}</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+
+                <div class="d-grid mt-5">
+                    <button type="submit" class="btn btn-primary btn-lg prediction-button" id="predictBtn">
+                        🔮 Predict Project Risk
+                    </button>
+                </div>
+            </form>
+
+            <div id="prediction-result" class="mt-4"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}
