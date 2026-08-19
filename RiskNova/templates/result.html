@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}Prediction Result{% endblock %}
+{% block content %}
+<section class="page-hero result-hero">
+    <div class="container py-5">
+        <div class="result-headline">
+            <span class="eyebrow">Prediction outcome</span>
+            <h1>Risk Assessment Report</h1>
+        </div>
+    </div>
+</section>
+
+<section class="section pb-5">
+    <div class="container">
+        <div class="result-grid">
+            <div class="result-card risk-panel">
+                <div class="risk-indicator risk-{{ prediction.risk_level|lower }}">
+                    {% if prediction.risk_level == 'HIGH' %}⚠️{% elif prediction.risk_level == 'MEDIUM' %}⚡{% else %}✅{% endif %}
+                </div>
+                <div class="risk-copy">
+                    <div class="risk-level-label">Risk Level</div>
+                    <h2>{{ prediction.risk_level }}</h2>
+                    <div class="risk-metrics">
+                        <div><span>Risk probability</span><strong>{{ risk_probability }}%</strong></div>
+                        <div><span>Risk category</span><strong>{{ prediction.risk_category }}</strong></div>
+                        <div><span>Prediction confidence</span><strong>{{ confidence }}%</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-card">
+                <h4>Main Contributing Factors</h4>
+                <ul class="factor-list">
+                    {% for factor in main_factors %}
+                        <li>{{ factor }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="result-card mt-4">
+            <h4>Recommended Mitigation Strategies</h4>
+            <div class="recommendation-grid">
+                {% for recommendation in prediction.recommendations %}
+                    <div class="recommendation-item">{{ recommendation }}</div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="{% url 'predict_form' %}" class="btn btn-primary btn-lg">Predict Another Project</a>
+            <a href="{% url 'dashboard' %}" class="btn btn-outline-secondary btn-lg">Back to Dashboard</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

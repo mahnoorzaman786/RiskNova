@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% block title %}Project Risk Predictor{% endblock %}
+{% block content %}
+<section class="hero-section" id="home">
+    <div class="container">
+        <div class="row align-items-center gy-5">
+            <div class="col-lg-7">
+                <span class="eyebrow">AI-powered project intelligence</span>
+                <h1>Predict Project Risks Before They Become Problems</h1>
+                <p class="lead">
+                    An AI-driven predictive analytics system that uses machine learning to assess software project risks and support better time, cost, and effort estimation.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary btn-lg btn-pill" href="{% url 'predict_form' %}">Start Risk Prediction</a>
+                    <a class="btn btn-outline-secondary btn-lg btn-pill" href="#how-it-works">How It Works</a>
+                </div>
+                <div class="hero-metrics">
+                    <div>
+                        <strong>92%</strong>
+                        <span>Prediction confidence</span>
+                    </div>
+                    <div>
+                        <strong>3-step</strong>
+                        <span>Risk assessment</span>
+                    </div>
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Monitoring support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="glass-panel">
+                    <div class="panel-topbar">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="risk-score-card">
+                        <div class="score-header">
+                            <span>Risk Index</span>
+                            <span class="badge badge-soft">Live</span>
+                        </div>
+                        <div class="score-value">76</div>
+                        <div class="score-scale">
+                            <span>Low</span>
+                            <span class="active">High</span>
+                        </div>
+                        <div class="progress-bar">
+                            <span style="width: 76%"></span>
+                        </div>
+                        <ul class="mini-factors">
+                            <li>Requirement volatility</li>
+                            <li>Communication gaps</li>
+                            <li>Resource constraints</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="how-it-works">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">How it works</span>
+            <h2>From inputs to prediction insights</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="info-card">
+                    <div class="icon-badge">01</div>
+                    <h4>Capture project data</h4>
+                    <p>Enter size, team, complexity, management quality, testing coverage, and related risk signals.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-card">
+                    <div class="icon-badge">02</div>
+                    <h4>Apply ML model</h4>
+                    <p>The trained pipeline preprocesses the features and produces a probability-based risk classification.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-card">
+                    <div class="icon-badge">03</div>
+                    <h4>Receive mitigation plan</h4>
+                    <p>Get a professional action plan, recommendation list, and confidence score for the project state.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section alt-bg">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Core features</span>
+            <h2>Built for intelligent project governance</h2>
+        </div>
+        <div class="row g-4 mt-2">
+            <div class="col-md-6 col-xl-3">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h5>Risk score analytics</h5>
+                    <p>Quantify risk exposure with structured, interpretable project metrics.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h5>ML-driven evaluation</h5>
+                    <p>Leverages machine learning to generalize across project risk patterns.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h5>Actionable insights</h5>
+                    <p>Shows the key drivers and recommended mitigation steps to act on early.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h5>Portfolio dashboard</h5>
+                    <p>Track historical risk patterns, trends, and project-level outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">ML workflow</span>
+            <h2>Machine learning pipeline</h2>
+        </div>
+        <div class="workflow-wrapper">
+            <div class="workflow-step">
+                <span>01</span>
+                <h6>User Input</h6>
+            </div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-step">
+                <span>02</span>
+                <h6>Data Validation</h6>
+            </div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-step">
+                <span>03</span>
+                <h6>Preprocessing</h6>
+            </div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-step">
+                <span>04</span>
+                <h6>Model Prediction</h6>
+            </div>
+            <div class="workflow-arrow">→</div>
+            <div class="workflow-step">
+                <span>05</span>
+                <h6>Risk Classification</h6>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section alt-bg" id="about">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <span class="eyebrow">About the research</span>
+                <h2>Predictive Analytics for Project Risk Management Using Machine Learning</h2>
+                <p>
+                    This research focuses on identifying project risk indicators, predicting risk severity, and supporting better planning decisions using AI-assisted analytics. The system provides early warnings that help teams mitigate schedule, scope, communication, and cost-related concerns before they escalate.
+                </p>
+                <div class="research-meta">
+                    <strong>Authors:</strong> Mahnoor Zaman, Nasir Umar, Amna Afzal, Afifa Saif
+                </div>
+                <div class="research-meta">
+                    <strong>Affiliation:</strong> NFC Institute of Engineering and Technology, Multan, Pakistan
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-card">
+                    <h5>Research Publication</h5>
+                    <a href="https://doi.org/10.5281/zenodo.19384197" target="_blank" rel="noreferrer">https://doi.org/10.5281/zenodo.19384197</a>
+                    <ul class="list-unstyled mt-3">
+                        <li>Machine learning risk classification</li>
+                        <li>Operational forecasting support</li>
+                        <li>Decision-ready visualization</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="research">
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">Technology stack</span>
+            <h2>Modern AI and web engineering</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-3"><div class="stack-card">Django</div></div>
+            <div class="col-md-3"><div class="stack-card">Bootstrap 5</div></div>
+            <div class="col-md-3"><div class="stack-card">JavaScript</div></div>
+            <div class="col-md-3"><div class="stack-card">Scikit-learn</div></div>
+            <div class="col-md-3"><div class="stack-card">Pandas</div></div>
+            <div class="col-md-3"><div class="stack-card">NumPy</div></div>
+            <div class="col-md-3"><div class="stack-card">HTML5</div></div>
+            <div class="col-md-3"><div class="stack-card">CSS3</div></div>
+        </div>
+    </div>
+</section>
+{% endblock %}
