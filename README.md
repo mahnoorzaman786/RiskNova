@@ -40,9 +40,9 @@ Upload project information and click predict to receive the risk result.
 - ➡ View top contributing factors
 - ➡ Receive recommendations
 
-## 🎥 Video Demo
+## 🎥 RiskNova Demo
 
-📺 [Click here to view the demo]  
+[▶️ Watch Full Demo](https://www.youtube.com/watch?v=7qFIUv3s0K8&t=3s) 
 ▶ Watch Demo
 
 ## 🗂️ Dataset
