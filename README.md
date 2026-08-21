@@ -40,13 +40,9 @@ Upload project information and click predict to receive the risk result.
 - ➡ Receive recommendations
 
 <<<<<<< HEAD
-## 🎥 Video Demo
-
-📺 [Click here to view the demo]  
-=======
 ## 🎥 RiskNova Demo
 
-[▶️ Watch Full Demo](https://www.youtube.com/watch?v=7qFIUv3s0K8&t=3s) 
+[▶️ Watch Full Demo](https://www.youtube.com/watch?v=NkeuGkn3twg) 
 >>>>>>> eb1c72c107d59fa31e1b7b7f67d4f2dee8e5f420
 ▶ Watch Demo
 
