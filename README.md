@@ -39,11 +39,9 @@ Upload project information and click predict to receive the risk result.
 - ➡ View top contributing factors
 - ➡ Receive recommendations
 
-<<<<<<< HEAD
 ## 🎥 RiskNova Demo
 
 [▶️ Watch Full Demo](https://www.youtube.com/watch?v=NkeuGkn3twg) 
->>>>>>> eb1c72c107d59fa31e1b7b7f67d4f2dee8e5f420
 ▶ Watch Demo
 
 ## 🗂️ Dataset
@@ -140,11 +138,6 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Open the browser at:
-
-```text
-http://127.0.0.1:8000/
-```
 
 ## ✨ Future Work
 
